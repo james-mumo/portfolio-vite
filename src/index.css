@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --colors-primary: #1ee0e0;
+}
+
+.activeSkillTab {
+  background: #0c6b4f;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background: #808dad;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  background: #171f38;
+}
+html,
+body {
+  font-family: "Space Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: rgb(1, 22, 39);
+
+  z-index: 1;
+}
+body::before {
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+  content: "";
+  /* background: url(".../../../public/noise.gif"); */
+  /* background-color: rgb(82, 35, 129); */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.opaqBall1 {
+  position: fixed;
+  height: 77px;
+  border-radius: 55%;
+  width: 77px;
+  background-color: aqua;
+  bottom: 123px;
+  z-index: -28;
+  opacity: 0.6;
+}
+.opaqBall2 {
+  position: fixed;
+  height: 77px;
+  border-radius: 55%;
+  width: 77px;
+  background-color: aqua;
+  top: 83px;
+  left: 66px;
+  z-index: -28;
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.app {
+  min-height: 90vh;
+}
+
+/*  */
+/*  */
+/* HERO SECTION STYLES */
+
+/* about me div */
+.aboutMeheader {
+  color: rgb(6, 147, 227);
+  text-transform: uppercase;
+  font-size: 28px;
+  display: inline-block;
+  position: relative;
+}
+
+.cardItemHeader {
+  color: rgb(6, 147, 227);
+  font-size: 39px;
+}
+
+/* the form on te borttom */
+/*  */
+/* 
+ */
+.mailForm {
+  position: relative;
+  backdrop-filter: blur(20px);
+  background: transparent;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+  color: #1ee0e0;
+}
+
+/* the fixed absolue links items */
+
+.mailTo {
+  writing-mode: vertical-rl;
+}
+.beforehover {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  transition: all 0.5s ease-out;
+  /* add default transition effect for all properties with 0.5s duration and ease-out timing function */
+}
+
+.beforehover:hover {
+  padding-top: 2px;
+  padding-right: 4px;
+  margin-bottom: 8px;
+  color: #1ee0e0;
+  transition: all 0.5s ease-in;
+  /* add transition effect on mouse hover with 0.5s duration and ease-in timing function */
+}
+
+.hoverEffect {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: all 1s;
+}
+
+.hoverEffect:hover {
+  padding: 2px 0;
+  color: #1ee0e0;
+}
+/* 
+.hoverEffect:hover {
+  padding: 10px 0;
+  color: initial;
+} */
+
+/* the repos section */
+/*  */
+
+.repoTags::-webkit-scrollbar {
+  display: none;
+}
+
