@@ -7,7 +7,7 @@ import Contact from "./components/Contact"
 import AboutMe from "./components/AboutMe"
 import Skills from "./components/Skills"
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material"
-import { personalInfo } from "./data/personalInfo"
+import { githubAuthToken, personalInfo } from "./data/personalInfo"
 import Design from "./components/Design"
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
   const [reposData, setReposData] = useState([])
 
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = "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"
+    const YOUR_ACCESS_TOKEN = githubAuthToken
 
     const headers = {
       Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,
