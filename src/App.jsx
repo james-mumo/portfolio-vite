@@ -15,7 +15,7 @@ const App = () => {
   const [reposData, setReposData] = useState([])
 
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = githubAuthToken
+    const YOUR_ACCESS_TOKEN = "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"
 
     const headers = {
       Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,
@@ -34,7 +34,7 @@ const App = () => {
         console.error("Error fetching user data:", error)
       }
     }
-    //
+
     async function fetchReposData() {
       try {
         const response = await fetch(
