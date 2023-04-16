@@ -15,7 +15,7 @@ const App = () => {
   const [reposData, setReposData] = useState([])
 
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = "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"
+    const YOUR_ACCESS_TOKEN = process.env.githubApiAccessToken
 
     const headers = {
       Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,

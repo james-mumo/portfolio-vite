@@ -130,4 +130,4 @@ export const intrestsInfo = ["Gaming", "Cooking", "Reading", "Singing"]
 
 export const weatherApiKey = "0d6d150964604cc286f230308222312"
 
-export const githubAuthToken = "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"
+// export const githubAuthToken = "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"
