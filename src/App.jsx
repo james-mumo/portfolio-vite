@@ -15,6 +15,7 @@ const App = () => {
   const [reposData, setReposData] = useState([])
 
   console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
+  console.log(process.env.githubApiAccessToken)
   useEffect(() => {
     const YOUR_ACCESS_TOKEN = import.meta.env.VITE_githubApiAccessToken
     console.log(YOUR_ACCESS_TOKEN)

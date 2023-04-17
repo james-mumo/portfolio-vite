@@ -63,7 +63,7 @@ export default function Hero({ githubName, githubBio, githubAvatar }) {
         <div className="relative h-[55vh] w-[55vh]">
           <img
             className="absolute gitAvatar border h-[55vh] w-[55vh] border-teal-600 object-cover rounded-[55px]"
-            src={githubAvatar || "./assets/j.png"}
+            src={"./assets/j.png"}
             alt="gitAvatar"
           />
           <span className="absolute bottom-5 items-center right-3 flex bg-[#01d2934f] cursor-pointer px-2 rounded-md gap-1">
