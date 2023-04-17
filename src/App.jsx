@@ -17,18 +17,18 @@ const App = () => {
   // console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
   // console.log(JSON.stringify(process.env.githubApiAccessToken))
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = JSON.stringify(process.env.githubApiAccessToken)
-    console.log(YOUR_ACCESS_TOKEN)
+    // const YOUR_ACCESS_TOKEN = JSON.stringify(process.env.githubApiAccessToken)
+    // console.log(YOUR_ACCESS_TOKEN)
 
-    const headers = {
-      Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,
-    }
+    // const headers = {
+    //   Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,
+    // }
 
     async function fetchUserData() {
       try {
         const response = await fetch(
-          `https://api.github.com/users/${personalInfo.githubUserName}`,
-          { headers }
+          `https://api.github.com/users/${personalInfo.githubUserName}`
+          // { headers }
         )
         const userData = await response.json()
 
@@ -41,8 +41,8 @@ const App = () => {
     async function fetchReposData() {
       try {
         const response = await fetch(
-          `https://api.github.com/users/${personalInfo.githubUserName}/repos`,
-          { headers }
+          `https://api.github.com/users/${personalInfo.githubUserName}/repos`
+          // { headers }
         )
         const reposData = await response.json()
 
@@ -59,44 +59,45 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <div className="z-20 relative app w-full">
+        <Navbar />
+        <div className=" flex flex-col gap-40 px-40 bg-cover ">
+          <Hero
+            githubBio={userData.login}
+            aboutMe={userData.bio}
+            githubName={userData.name}
+            githubAvatar={userData.avatar_url}
+          />
 
-      <div className="app w-full flex flex-col gap-40 px-40 relative bg-cover z-20">
-        <Hero
-          githubBio={userData.login}
-          aboutMe={userData.bio}
-          githubName={userData.name}
-          githubAvatar={userData.avatar_url}
-        />
+          <AboutMe aboutMe={userData?.aboutMe} />
+          <Skills />
+          {/* <Experience /> */}
+          <Repos repos={reposData} />
 
-        <AboutMe aboutMe={userData?.aboutMe} />
-        <Skills />
-        <Experience />
-        <Repos repos={reposData} />
+          <Contact />
 
-        <Contact />
+          <div className="bottom-20 left-24  z-50 fixed flex flex-col gap-1 text-xlg">
+            <a href="#" className="hoverEffect">
+              <GitHub />
+            </a>
+            <a href="#" className="hoverEffect">
+              <LinkedIn />
+            </a>
+            <a href="#" className="hoverEffect">
+              <Twitter />
+            </a>
+            <a href="#" className="hoverEffect">
+              <Instagram />
+            </a>
+          </div>
 
-        <div className="bottom-20 left-24  z-50 fixed flex flex-col gap-1 text-xlg">
-          <a href="#" className="hoverEffect">
-            <GitHub />
-          </a>
-          <a href="#" className="hoverEffect">
-            <LinkedIn />
-          </a>
-          <a href="#" className="hoverEffect">
-            <Twitter />
-          </a>
-          <a href="#" className="hoverEffect">
-            <Instagram />
+          {/*  */}
+          <a
+            href="mailto:mumojames98@gmail.com"
+            className=" bottom-10 right-20 mailTo z-50  px-5 py-10 fixed hover:text-teal-300 transition-all duration-500  hover:-translate-y-3 hover:translate-x-3">
+            mumojames98@gmail.com
           </a>
         </div>
-
-        {/*  */}
-        <a
-          href="mailto:mumojames98@gmail.com"
-          className=" bottom-10 right-20 mailTo z-50  px-5 py-10 fixed hover:text-teal-300 transition-all duration-500  hover:-translate-y-3 hover:translate-x-3">
-          mumojames98@gmail.com
-        </a>
       </div>
       <div className="w-full h-screen absolute top-0 left-0 z-10">
         <Design />

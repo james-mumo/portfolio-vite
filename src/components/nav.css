@@ -40,7 +40,7 @@ li:hover {
   color: #1ee0e0;
   transition: all 0.5s;
 }
-/* 
+
 ul li:not(:last-child)::before {
   counter-increment: item;
   content: "0" counter(item) ".";
@@ -59,4 +59,4 @@ li::after {
   background-color: rgb(6, 147, 227);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   opacity: 0.5;
-} */
+}
