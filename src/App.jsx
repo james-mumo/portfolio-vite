@@ -14,12 +14,10 @@ const App = () => {
   const [userData, setUserData] = useState(true)
   const [reposData, setReposData] = useState([])
 
-  console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
-  console.log(JSON.stringify(process.env.githubApiAccessToken))
+  // console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
+  // console.log(JSON.stringify(process.env.githubApiAccessToken))
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN =
-      import.meta.env.VITE_githubApiAccessToken ||
-      process.env.githubApiAccessToken
+    const YOUR_ACCESS_TOKEN = process.env.githubApiAccessToken
     console.log(YOUR_ACCESS_TOKEN)
 
     const headers = {
