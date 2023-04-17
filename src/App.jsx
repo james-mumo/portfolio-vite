@@ -17,7 +17,7 @@ const App = () => {
   // console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
   // console.log(JSON.stringify(process.env.githubApiAccessToken))
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = process.env.githubApiAccessToken
+    const YOUR_ACCESS_TOKEN = JSON.stringify(process.env.githubApiAccessToken)
     console.log(YOUR_ACCESS_TOKEN)
 
     const headers = {
