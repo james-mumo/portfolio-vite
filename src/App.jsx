@@ -7,15 +7,17 @@ import Contact from "./components/Contact"
 import AboutMe from "./components/AboutMe"
 import Skills from "./components/Skills"
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material"
-import { githubAuthToken, personalInfo } from "./data/personalInfo"
+import { personalInfo } from "./data/personalInfo"
 import Design from "./components/Design"
 
 const App = () => {
   const [userData, setUserData] = useState(true)
   const [reposData, setReposData] = useState([])
 
+  console.log(JSON.stringify(import.meta.env.VITE_githubApiAccessToken))
   useEffect(() => {
-    const YOUR_ACCESS_TOKEN = process.env.githubApiAccessToken
+    const YOUR_ACCESS_TOKEN = import.meta.env.VITE_githubApiAccessToken
+    console.log(YOUR_ACCESS_TOKEN)
 
     const headers = {
       Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`,
