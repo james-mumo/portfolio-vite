@@ -69,12 +69,12 @@ const App = () => {
             githubAvatar={userData.avatar_url}
           />
 
-//           <AboutMe aboutMe={userData?.aboutMe} />
-//           <Skills />
-          {/* <Experience /> */}
-//           <Repos repos={reposData} />
+        {/*   <AboutMe aboutMe={userData?.aboutMe} />
+             <Skills />
+              <Experience /> 
+              <Repos repos={reposData} />
 
-//           <Contact />
+           <Contact /> */}
 
           <div className="bottom-20 left-24  z-50 fixed flex flex-col gap-1 text-xlg">
             <a href="#" className="hoverEffect">
