@@ -12,9 +12,9 @@ const Design = () => {
     await console.log(container);
   }, []);
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-[100vh]">
       <Particles
-        className="w-full h-screen"
+        className="w-full h-[100vh] opacity-50"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -95,7 +95,7 @@ const Design = () => {
         }}
       />
     </div>
-  );
+  )
 };
 
 export default Design;

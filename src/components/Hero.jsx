@@ -5,8 +5,11 @@ import { PersonPin } from "@mui/icons-material"
 import Marquee from "react-fast-marquee"
 import DigitalClock from "./DigitalClock"
 import GetWeather from "./GetWeather"
+import { motion } from "framer-motion"
 
 export default function Hero({ githubName, githubBio, githubAvatar }) {
+  const myData = { name: "James Mumo" }
+
   const MarqueeItem = ({ name, img }) => {
     return (
       <div className="flex border  border-teal-500 p-1 object-contain bg-[#01d29313] items-center px-3 mx-4 gap-4 h-14 rounded-md">
@@ -21,14 +24,43 @@ export default function Hero({ githubName, githubBio, githubAvatar }) {
   }
 
   return (
-    <div className="hero flex flex-col w-full justify-center gap-10 min-h-[85vh] items-center py-12 px-0">
-      <div className="profileInfo flex h-fit py-0 w full items-center justify-center gap-24">
+    <div className="hero border flex flex-col w-full mt-10 justify-center gap-10 min-h-[85vh] items-center py-12 px-0">
+      <div className="profileInfo flex h-fit py-0 w-full items-center justify-center gap-24">
         <div className="profileInfo flex flex-col  h-fit gap-0 py-0">
           <span className="opacity-70 font-semibold text-[33px] leading-none">
             Hello👋🏾,I am
           </span>
           <span className="text-[#7fffd4] font-semibold text-[6em] leading-[90px]">
             {personalInfo.fullName}
+            {myData.name.split("").map((letter, idx) => (
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: [1, 1.2, 1],
+                  transition: {
+                    // type: "spring",
+                    stiffness: 300,
+                    delay: idx * 0.1,
+                  },
+                }}
+                whileHover={{
+                  color: "#5DECCC",
+                  scaleY: [1, 0.9, 0.8, 0.7, 1.3, 1],
+                  scaleX: [1, 1.1, 1.2, 1.3, 0.7, 1],
+                  transition: {
+                    stiffness: 100,
+                    damping: 30,
+                    duration: 0.5,
+                  },
+                }}
+                className=""
+                key={idx}>
+                {letter}
+              </motion.h1>
+            ))}
           </span>
           <span className="opacity-70 pb-3 flex gap-2 font-thin text-[34px]">
             &gt;

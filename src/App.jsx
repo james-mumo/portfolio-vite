@@ -59,24 +59,27 @@ const App = () => {
 
   return (
     <>
-      <div className="z-20 relative app w-full">
-        <Navbar />
-        <div className=" flex flex-col gap-40 px-40 bg-cover ">
-          <Hero
-            githubBio={userData.login}
-            aboutMe={userData.bio}
-            githubName={userData.name}
-            githubAvatar={userData.avatar_url}
-          />
+      <div className="z-20 relative app w-full overflow-y-auto">
+        <div className="flex relative overflow-y-auto h-screen">
+          <Navbar />
+          <div className="flex flex-col gap-0 bg-cover px-20 w-[88vw]">
+            <Hero
+              githubBio={userData.login}
+              aboutMe={userData.bio}
+              githubName={userData.name}
+              githubAvatar={userData.avatar_url}
+            />
 
-        {/*   <AboutMe aboutMe={userData?.aboutMe} />
-             <Skills />
+            {/* <AboutMe aboutMe={userData?.aboutMe} /> */}
+            {/* <Skills />
               <Experience /> 
               <Repos repos={reposData} />
+              
+            <Contact /> */}
+          </div>
+          {/*  */}
 
-           <Contact /> */}
-
-          <div className="bottom-20 left-24  z-50 fixed flex flex-col gap-1 text-xlg">
+          <div className="bottom-20 left-52 z-50 fixed flex flex-col gap-1 text-xlg">
             <a href="#" className="hoverEffect">
               <GitHub />
             </a>
@@ -90,16 +93,14 @@ const App = () => {
               <Instagram />
             </a>
           </div>
-
-          {/*  */}
           <a
             href="mailto:mumojames98@gmail.com"
-            className=" bottom-10 right-20 mailTo z-50  px-5 py-10 fixed hover:text-teal-300 transition-all duration-500  hover:-translate-y-3 hover:translate-x-3">
+            className="bottom-10 right-4 mailTo z-50  px-5 py-10 fixed hover:text-teal-300 transition-all duration-500  hover:-translate-y-3 hover:translate-x-3">
             mumojames98@gmail.com
           </a>
         </div>
       </div>
-      <div className="w-full h-screen absolute top-0 left-0 z-10">
+      <div className="designBg w-full h-[100vh] absolute top-0 left-0 z-10">
         <Design />
       </div>
     </>

@@ -85,6 +85,11 @@ a {
 .app {
   min-height: 90vh;
 }
+/* the paricles */
+
+.designBg {
+opacity: 90;
+}
 
 /*  */
 /*  */
@@ -168,4 +173,3 @@ a {
 .repoTags::-webkit-scrollbar {
   display: none;
 }
-
