@@ -14,7 +14,7 @@ const Design = () => {
   return (
     <div className="w-full h-[100vh]">
       <Particles
-        className="w-full h-[100vh] opacity-50"
+        className="w-full h-[90vh] opacity-50"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}

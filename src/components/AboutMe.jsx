@@ -1,5 +1,6 @@
 import { personalInfo, aboutMeInfoTags } from "../data/personalInfo"
 import { FormatQuoteOutlined, PersonPin } from "@mui/icons-material"
+import TagSphere from "./TagSphere"
 
 const page = ({ aboutMe }) => {
   return (
@@ -12,11 +13,12 @@ const page = ({ aboutMe }) => {
       </span>
 
       <div className="flex gap-20 items-center justify-center">
-        <img
+        {/* <img
           className="aboutmeImg border-teal-400 border h-[390px] w-[390px] rounded-md"
           src={"./gitAvatar.png"}
           alt="gitAvatar"
-        />
+        /> */}
+        <TagSphere/>
         {/*  */}
 
         {/*  */}

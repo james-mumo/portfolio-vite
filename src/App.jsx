@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <>
-      <div className="z-20 relative app w-full overflow-y-auto">
+      <div className="z-20 relative app w-full overflow-y-auto transition-all duration-500 ease-in-out scroll-smooth">
         <div className="flex relative overflow-y-auto h-screen">
           <Navbar />
           <div className="flex flex-col gap-0 bg-cover px-20 w-[88vw]">
@@ -70,12 +70,29 @@ const App = () => {
               githubAvatar={userData.avatar_url}
             />
 
-            {/* <AboutMe aboutMe={userData?.aboutMe} /> */}
-            {/* <Skills />
-              <Experience /> 
-              <Repos repos={reposData} />
-              
-            <Contact /> */}
+            <span className="markup">&lt;html&gt;</span>
+            <span className="markup ml-5">&lt;body&gt;</span>
+            <span className="markup ml-8">&lt;div&gt;</span>
+
+            <AboutMe aboutMe={userData?.aboutMe} />
+
+            <span className="markup ml-8">&lt;/div&gt;</span>
+            <span className="markup ml-8">&lt;div&gt;</span>
+
+            <Skills />
+
+            <span className="markup ml-8">&lt;/div&gt;</span>
+            <span className="markup ml-8">&lt;div&gt;</span>
+
+            <Experience />
+            <span className="markup ml-8">&lt;/div&gt;</span>
+            <span className="markup ml-8">&lt;div&gt;</span>
+            {/* <Repos repos={reposData} /> */}
+
+            <Contact />
+
+            <span className="markup ml-10">&lt;/body&gt;</span>
+            <span className="markup">&lt;/html&gt;</span>
           </div>
           {/*  */}
 
@@ -100,7 +117,7 @@ const App = () => {
           </a>
         </div>
       </div>
-      <div className="designBg w-full h-[100vh] absolute top-0 left-0 z-10">
+      <div className="w-full h-[100vh] absolute top-0 left-0 z-10">
         <Design />
       </div>
     </>

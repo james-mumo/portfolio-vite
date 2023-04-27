@@ -5,7 +5,7 @@ export const aboutMeInfoTags = {
 }
 
 export const personalInfo = {
-  fullName: "James Mumo",
+  fullName: "James-Mumo",
   githubUserName: "james-mumo",
 
   mySkills: [
