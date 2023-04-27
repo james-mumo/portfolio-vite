@@ -56,7 +56,7 @@ export default function Hero({ githubName, githubBio, githubAvatar }) {
                     duration: 0.5,
                   },
                 }}
-                className=""
+                className="flex"
                 key={idx}>
                 {letter}
               </motion.h1>
