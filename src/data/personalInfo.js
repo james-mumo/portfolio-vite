@@ -39,7 +39,7 @@ export const personalInfo = {
   bio: "I am currently Looking for new Opportunities in Mobile/Web Developement while learning Data Science - Tableau and TensorFlow.",
   phoneNumber: "07435 974 68",
   whatsapp: "+2547 435 974 68",
-  location: "Thika",
+  location: "Nairobi",
   email: "mumojames98@gmail.com",
   locations: ["Nairobi, Thika"],
   linkedIn: "www.linkedIn.com/343",

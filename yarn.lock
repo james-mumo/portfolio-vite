@@ -446,6 +446,13 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.16.tgz#260f19b0a3300d22c3a3f52722c671dc561edaa3"
   integrity sha512-xJ7OH/nanouJO9pf03YsL9NAFQBHd8AqfrQd7Pf5laGyyTt/gToul6QYOA/i5i/q8y9iaM5DQFNTgpi995VkOg==
 
+"@frank-mayer/react-tag-cloud@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@frank-mayer/react-tag-cloud/-/react-tag-cloud-1.2.1.tgz#c444963537c4c7b638ca2266906f3c4c952e4d35"
+  integrity sha512-xmbwDCLgk9PUpMzbUZU4Y8nMWX1rtnaP+B0h7Hkagtc+eWBzqYCxDOaXncXdcSpxVEbDbpT0ntK+bcuzy9zZyg==
+  dependencies:
+    TagCloud "^2.3.2"
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"

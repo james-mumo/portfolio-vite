@@ -29,11 +29,14 @@ const Navbar = () => {
         <li>
           <a href="#skills">Skills</a>
         </li>
-        <li className="">
+        {/* <li className="">
           <a href="#experience">Experience</a>
-        </li>
+        </li> */}
         <li>
           <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#repo">Other Projects</a>
         </li>
         <li>
           <a href="#contact">Contact</a>

@@ -7,14 +7,19 @@ import SkillsTabs from "./SkillsTabs"
 
 function Skills() {
   return (
-    <div className="h-fit w-full flex flex-col gap-2 py-0 px-0" id="skills">
+    <div className="h-fit w-full py-10 flex flex-col gap-2 px-0" id="skills">
+      <span className="markup ml-9">&lt;section&gt;</span>
       {/*  */}
+
+      <h6 className="markup ml-14 text-[15px]">&lt;h2&gt;</h6>
       <span className="flex items-center">
         <hr className="border-t border-teal-400 mx-3 w-10" />
         <span className="text-[#7fffd4] text-[33px] font-semibold">Skills</span>
         <hr className="border-t border-teal-400 mx-3 flex-grow" />
       </span>
+      <h6 className="markup ml-14 text-[14px]">&lt;/h2&gt;</h6>
       {/*  */}
+      <h6 className="markup ml-14 text-[14px]">&lt;div&gt;</h6>
       <div className="flex gap-4 ">
         <div className="flex gap-5">
           <div className="flex flex-col gap-6">
@@ -30,8 +35,11 @@ function Skills() {
         </div>
       </div>
 
+      <h6 className="markup ml-14 text-[15px]">&lt;/div&gt;</h6>
       {/*  */}
       {/*  */}
+
+      <h6 className="markup ml-14 text-[15px]">&lt;span&gt;</h6>
       <span className="flex items-center mt-1">
         <hr className="border-t border-teal-400 mx-3 w-3" />
         <span className="text-[#7fffd4] text-[15px] font-semibold">
@@ -46,6 +54,10 @@ function Skills() {
         <ExpTag itemText={"Team Player"} />
         <ExpTag itemText={"Very Creative"} />
       </span>
+
+      <h6 className="markup ml-14 text-[15px]">&lt;/span&gt;</h6>
+
+      <span className="markup ml-8">&lt;/section&gt;</span>
       {/*  */}
     </div>
   )

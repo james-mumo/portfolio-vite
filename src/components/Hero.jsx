@@ -13,7 +13,7 @@ export default function Hero({ githubName, githubBio, githubAvatar }) {
 
   const MarqueeItem = ({ name, img }) => {
     return (
-      <div className="flex border  border-teal-500 p-1 object-contain bg-[#01d29313] items-center px-3 mx-4 gap-4 h-12 rounded-md">
+      <div className="flex border  border-teal-500 p-1 object-contain bg-[#01d29313] items-center px-3 mx-4 gap-4 h-10 rounded-md">
         <img
           src={img}
           alt=""

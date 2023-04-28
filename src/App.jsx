@@ -9,6 +9,7 @@ import Skills from "./components/Skills"
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material"
 import { personalInfo } from "./data/personalInfo"
 import Design from "./components/Design"
+import Projects from "./components/Projects"
 
 const App = () => {
   const [userData, setUserData] = useState(true)
@@ -72,32 +73,34 @@ const App = () => {
 
             <span className="markup">&lt;html&gt;</span>
             <span className="markup ml-5">&lt;body&gt;</span>
-            <span className="markup ml-8">&lt;div&gt;</span>
 
             <AboutMe aboutMe={userData?.aboutMe} />
 
-            <span className="markup ml-8">&lt;/div&gt;</span>
-            <span className="markup ml-8">&lt;div&gt;</span>
+            <span className="markup ml-8">&lt;/br&gt;</span>
 
             <Skills />
 
-            <span className="markup ml-8">&lt;/div&gt;</span>
-            <span className="markup ml-8">&lt;div&gt;</span>
+            <span className="markup ml-8">&lt;/br&gt;</span>
 
-            <Experience />
-            <span className="markup ml-8">&lt;/div&gt;</span>
-            <span className="markup ml-8">&lt;div&gt;</span>
-            {/* <Repos repos={reposData} /> */}
+            <Projects />
+
+            <span className="markup ml-8">&lt;/br&gt;</span>
+
+            {/* <Experience /> */}
+
+            <Repos repos={reposData} />
+
+            <span className="markup ml-8">&lt;/br&gt;</span>
 
             <Contact />
 
-            <span className="markup ml-10">&lt;/body&gt;</span>
+            <span className="markup ml-6">&lt;/body&gt;</span>
             <span className="markup">&lt;/html&gt;</span>
           </div>
           {/*  */}
 
           <div className="bottom-20 left-52 z-50 fixed flex flex-col gap-1 text-xlg">
-            <a href="#" className="hoverEffect">
+            <a href="https://github.com/james-mumo" className="hoverEffect">
               <GitHub />
             </a>
             <a href="#" className="hoverEffect">

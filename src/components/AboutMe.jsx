@@ -3,14 +3,23 @@ import { FormatQuoteOutlined, PersonPin } from "@mui/icons-material"
 import TagSphere from "./TagSphere"
 
 const page = ({ aboutMe }) => {
+  const tags = [
+    ...personalInfo.skillsTabsData.frameworksAndLibraries,
+    ...personalInfo.skillsTabsData.languages,
+    ...personalInfo.skillsTabsData.tools,
+  ]
   return (
-    <div id="about" className="h-fit w-full flex flex-col gap-0 py-0 px-0">
+    <div id="about" className="h-fit w-full py-10 flex flex-col gap-0 px-0">
+      <span className="markup ml-9">&lt;section&gt;</span>
       {/*  */}
+      <h6 className="markup ml-14 text-[15px]">&lt;h2&gt;</h6>
       <span className="flex items-center">
         <hr className="border-t border-teal-400 mx-3 w-10" />
         <span className="text-[#7fffd4] text-[33px] font-semibold">About</span>
         <hr className="border-t border-teal-400 mx-3 flex-grow" />
       </span>
+      <h6 className="markup ml-14 text-[15px]">&lt;/h2&gt;</h6>
+      <h6 className="markup ml-14 text-[15px]">&lt;div&gt;</h6>
 
       <div className="flex gap-20 items-center justify-center">
         {/* <img
@@ -18,13 +27,16 @@ const page = ({ aboutMe }) => {
           src={"./gitAvatar.png"}
           alt="gitAvatar"
         /> */}
-        <TagSphere/>
+        {/* <div className="flex h-10 w-10 border relative"> */}
+        <TagSphere tags={tags} width={600} height={400} />
+        {/* </div> */}
         {/*  */}
 
         {/*  */}
 
         {/*  */}
         <span className="aboutMeInfo flex flex-col py-4 gap-2">
+          <h6 className="markup ml-0 text-[15px]">&lt;p&gt;</h6>
           <span className="flex items-center">
             {/* <hr className="border-t border-teal-400 mx-3 w-10" /> */}
             <span className="text-[#7fffd4] text-[15px] font-semibold">
@@ -33,10 +45,11 @@ const page = ({ aboutMe }) => {
             <hr className="border-t border-teal-400 mx-3 flex-grow" />
           </span>
           {/*  */}
-          <span className="githubBio text-2xl">
+          {/* <span className="githubBio text-2xl">
             {aboutMe || personalInfo.fakeGithubBio}
-          </span>
+          </span> */}
           {/*  */}
+
           <span className="aboutInfo opacity-70">
             <FormatQuoteOutlined
               color="#7fffd4"
@@ -70,9 +83,12 @@ const page = ({ aboutMe }) => {
               fontSize="large"
               className="p-0  ml-2 mr-1 text-[#7fffd4]"
             />
+            <h6 className="markup ml-0 text-[15px]">&lt;/p&gt;</h6>
           </span>
           {/*  */}
-          <span className="flex items-center mt-5">
+
+          <h6 className="markup ml-0 text-[15px] mt-5">&lt;/span&gt;</h6>
+          <span className="flex items-center ">
             <hr className="border-t border-teal-400 mx-3 w-10" />
             <span className="text-[#7fffd4] text-[15px] font-semibold">
               Experience Details
@@ -95,9 +111,13 @@ const page = ({ aboutMe }) => {
             />
           </span>
 
+          <h6 className="markup ml-0 text-[15px]">&lt;/span&gt;</h6>
           {/*  */}
         </span>
       </div>
+
+      <h6 className="markup ml-9 text-[15px]">&lt;/div&gt;</h6>
+      <span className="markup ml-8">&lt;/section&gt;</span>
     </div>
   )
 }
