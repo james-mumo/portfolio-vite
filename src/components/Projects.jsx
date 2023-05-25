@@ -180,7 +180,7 @@ const Projects = () => {
         />
         <ImgLeft
           projName="Rental Hub"
-          imgg="./renthub.PNG"
+          imgg="./renthub.png"
           githubLink="https://github.com/james-mumo/rental-hub-rn"
           liveLink="https://raw.githubusercontent.com/james-mumo/rental-hub-rn/main/rentalhub.apk"
           desc="This is a React Native app that helps users find rentals in various locations. It allows users to filter their search based on various parameters such as location, price range, and number of rooms with detailed information about each rental, including images, features, and amenities."
