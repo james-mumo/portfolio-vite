@@ -7,6 +7,7 @@ import DigitalClock from "./DigitalClock"
 import GetWeather from "./GetWeather"
 import { motion } from "framer-motion"
 import Design from "./Design"
+import { Link } from "react-router-dom"
 
 export default function Hero({ githubName, githubBio, githubAvatar }) {
   const myData = { name: "James-Mumo" }
@@ -99,10 +100,10 @@ export default function Hero({ githubName, githubBio, githubAvatar }) {
             </span>
             <div className="getInTouchBtn flex gap-2">
               <button className="bg-[#009688]  hover:bg-teal-700 px-5 text-md rounded-md py-1">
-                Contact Me
+                <a href="#contact"> Contact Me </a>
               </button>
               <button className="border-[#009688] border text-teal-400  hover:border-teal-400 px-5 text-md opacity-90 rounded-md py-1">
-                View CV
+                <Link to="/cv"> View CV</Link>
               </button>
             </div>
             <span className="timeDate">
