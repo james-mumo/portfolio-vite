@@ -4,7 +4,9 @@ import { Visibility } from "@mui/icons-material"
 const SeeCv = () => {
   return (
     <div className="flex flex-col">
-      <main className="nav w-full z-50 fixed flex flex-row justify-between px-36 shadow-lg shadow-[rgb(6, 56, 97)]">
+
+      <main className="nav w-full z-50 fixed flex flex-row justify-between px-36 py-2 shadow-lg shadow-[rgb(6, 56, 97)]">
+
         <a href="/" className="pl-4">
           <span className="flex items-center gap-2 overflow-hidden cursor-pointer">
             <img
