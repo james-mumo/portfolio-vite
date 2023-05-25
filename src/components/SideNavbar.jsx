@@ -2,15 +2,16 @@ import React from "react"
 import { Visibility } from "@mui/icons-material"
 import "./nav.css"
 
-const Navbar = () => {
+const SideNavbar = () => {
   return (
-    <main className="nav w-full z-50 fixed flex flex-row justify-between px-36 py-2 shadow-lg shadow-[rgb(6, 56, 97)]">
-      <a href="/" className="pl-4">
-        <span className="flex items-center gap-2 overflow-hidden cursor-pointer">
+    <main className="nav sticky top-0 h-[100vh] w-[12vw] flex flex-col items-center justify-between px-2 py-10 shadow-lg shadow-[rgb(6, 56, 97)] ">
+      {/*  */}
+      <a href="/">
+        <span className="flex flex-col items-center gap-1 overflow-hidden cursor-pointer">
           <img
             src="./gitAvatar.png"
             alt="usernameInitialsIcon"
-            className="object-cover rounded-full border-[2px] border-[#1ee0e0] w-[45px] h-[45px]"
+            className="object-cover rounded-full border-[2px] border-[#1ee0e0] w-[85px] h-[85px]"
           />
 
           <h1 className="text-[32px]">
@@ -50,4 +51,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default SideNavbar
