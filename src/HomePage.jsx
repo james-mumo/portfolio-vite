@@ -90,9 +90,9 @@ const HomePage = () => {
 
           {/* <Experience /> */}
 
-          {/* <Repos repos={reposData} /> */}
+          <Repos repos={reposData} /> 
 
-          {/* <span className="markup ml-8">&lt;/br&gt;</span> */}
+          <span className="markup ml-8">&lt;/br&gt;</span> 
 
           <Contact />
 
